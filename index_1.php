@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CRUD-Produto</title>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <!-- Css personalizado para o NavBar -->
+    <!-- Custom styles for this template -->
     <link href="./css/sticky-footer-navbar.css" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
 
     <header>
-        <!-- Navbar Fixa no Topo da Tela -->
+        <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.php">CRUD-Produto</a>
@@ -26,19 +26,31 @@
                             <a class="nav-link" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="listarProdutos.php">Listar Produtos</a>
+                            <a class="nav-link" href="#">Listar Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cadastrarProdutos.php">Cadastrar Produto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="listarUsuarios.php">Listar Usuários</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cadastrarUsuarios.php">Cadastrar Usuários</a>
+                            <a class="nav-link" href="#">Cadastrar Produto</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        <div class="container">
+            <h1>CRUD-Produto em PHP</h1>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+        <div class="container">
+            <span class="text-body-secondary">#Rodapé</span>
+        </div>
+    </footer>
+
+    <script src="http://localhost/CRUD-Produto/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

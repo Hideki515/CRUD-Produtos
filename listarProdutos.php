@@ -1,10 +1,19 @@
 <?php
+session_start();
 require_once 'header.php';
 ?>
 
 <main role="main" class="flex-shrink-0">
   <div class="container">
     <h1 class="mt-2">Listagem de Produtos</h1>
+
+    <?php //Mensagens de Erro ou Sucesso na execução das funções              
+    if (isset($_SESSION['msg'])) {
+      echo $_SESSION["msg"];
+      unset($_SESSION["msg"]);
+    }
+    ?>
+
     <?php
     //Credenciais para conexão com o Banco
     $dbhost = 'localhost:3306';
@@ -37,6 +46,7 @@ require_once 'header.php';
       echo '        <th class="info">Preço</th>';
       echo '        <th class="info">Qtde.</th>';
       echo '        <th class="info">Cadastro</th>';
+      echo '        <th class="info"></th>';
       echo '      </tr>';
       echo '    </thead>';
       echo '    <tbody>';
@@ -48,6 +58,9 @@ require_once 'header.php';
         echo '  <td>' . $row['preco'] . '</td>';
         echo '  <td>' . $row['quantidade'] . '</td>';
         echo '  <td>' . $row['dataCadastro'] . '</td>';
+        echo ' <td> <a href="editarProduto.php?id=' . $row['id'] . '" class="btn btn-info btn-sm">Editar</a>
+           <a href="excluirProduto.php?id=' . $row['id'] . '&nome=' . $row['nome'] . '" class="btn btn-danger btn-sm mt-1">Excluir</a></td>';
+
         echo '</tr>';
       }
       echo '    </tbody>';
@@ -58,10 +71,6 @@ require_once 'header.php';
     }
 
     //echo "</PRE>";
-
-
-
-
 
     //Fecha  a conexão
     mysqli_close($conn);
