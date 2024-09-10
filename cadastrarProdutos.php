@@ -19,15 +19,18 @@ require_once 'header.php';
         <form action="salvarProduto.php" method="post" id="formCadastro">
           <div class="form-group">
             <label for="nome">Nome do Produto</label>
-            <input type="text" class="form-control" name="nome" value="<?php if (isset($_SESSION["form"]["nome"])) echo $_SESSION["form"]["nome"]; ?>" required>
+            <input type="text" class="form-control" name="nome"
+              value="<?php if (isset($_SESSION["form"]["nome"])) echo $_SESSION["form"]["nome"]; ?>" required>
           </div>
           <div class="form-group">
             <label for="descricao">Descrição</label>
-            <textarea class="form-control" name="descricao"><?php if (isset($_SESSION["form"]["descricao"])) echo $_SESSION["form"]["descricao"]; ?></textarea>
+            <textarea class="form-control"
+              name="descricao"><?php if (isset($_SESSION["form"]["descricao"])) echo $_SESSION["form"]["descricao"]; ?></textarea>
           </div>
           <div class="form-group">
             <label for="preco">Preço</label>
-            R$ <input type="text" class="form-control <?php if (isset($_SESSION["erropreco"])) echo 'is-invalid'; ?>" name="preco" value="<?php if (isset($_SESSION["form"]["preco"])) echo $_SESSION["form"]["preco"]; ?>">
+            R$ <input type="text" class="form-control <?php if (isset($_SESSION["erropreco"])) echo 'is-invalid'; ?>"
+              name="preco" value="<?php if (isset($_SESSION["form"]["preco"])) echo $_SESSION["form"]["preco"]; ?>">
             <div class="invalid-feedback">
               <?php echo $_SESSION["erropreco"];
               unset($_SESSION["erropreco"]); ?>
