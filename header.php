@@ -36,6 +36,10 @@
             <li class="nav-item">
               <a class="nav-link" href="cadastrarProdutos.php">Cadastrar Produto</a>
             </li>
+            <!-- Link para Cadastro de Usuário -->
+            <li class="nav-item">
+              <a class="nav-link" href="cadastrarUsuarios.php">Cadastrar Usuário</a>
+            </li>
           </ul>
         </div>
       </div>
