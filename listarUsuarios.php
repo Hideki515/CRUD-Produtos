@@ -56,7 +56,7 @@ require_once 'header.php';
         echo '  <td>' . $row['email'] . '</td>';
         echo '  <td>' . $row['permissao'] . '</td>';
         echo ' <td> <a href="editarUsuario.php?id=' . $row['login'] . '" class="btn btn-outline-info btn-sm">Editar</a>
-              <a href="excluirUsuario.php?id=' . $row['login'] . '&nome=' . $row['nome'] . '" class="btn btn-outline-danger btn-sm mt-1">Excluir</a></td>';
+              <a href="excluirUsuario.php?id=' . $row['login'] . '&nome=' . $row['nome'] . '" class="btn btn-outline-danger btn-sm">Excluir</a></td>';
 
         echo '</tr>';
       }
