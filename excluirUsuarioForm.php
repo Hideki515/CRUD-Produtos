@@ -13,16 +13,14 @@ require_once 'header.php';
         <form action="excluirUsuarioExclusao.php" method="post"
           id="formExcluirUsuario">
           <input type="hidden" name="login" value="<?php if (isset($_SESSION["form"]["id"])) echo $_SESSION["form"]["id"]; ?>">
-          <div class="card text-white bg-danger mb-3" style="max-width: 22 rem;">
+          <div class="card text-white bg-secondary mb-3" style="max-width: 22 rem;">
             <div class="card-header">Confirmação da Exclusão do Usuario</div>
             <div class="card-body">
               <h5 class="card-title">Excluir?</h5>
               <p>Confirma exclusão do Login: <?php if (isset($_SESSION["form"]["id"])) echo $_SESSION["form"]["id"]; ?>
-              do Usuario: <?php if (isset($_SESSION["form"]["nome"])) echo $_SESSION["form"]["nome"]; ?> ?</p>
-              <button type="submit" class="btn	btn-outline-warning	btn-sm	mt-
-2">Confirmar</button>
-              <a href="listarUsuarios.php" class="btn	btn-outline-info	btn-sm	mt-
-2">Cancelar</a>
+                do Usuario: <?php if (isset($_SESSION["form"]["nome"])) echo $_SESSION["form"]["nome"]; ?> ?</p>
+              <button type="submit" class="btn	btn-danger	btn-sm	mt-2">Confirmar</button>
+              <a href="listarUsuarios.php" class="btn	btn-info	btn-sm	mt-2">Cancelar</a>
             </div>
           </div>
         </form>
