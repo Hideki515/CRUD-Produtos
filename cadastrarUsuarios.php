@@ -24,8 +24,7 @@ require_once 'header.php';
           <div class="form-group">
             <label for="login">Login</label>
             <input type="text" class="form-control <?php if (isset($_SESSION["erroLogin"])) echo 'is-invalid'; ?>"
-              name="login" value="<?php if (isset($_SESSION["form"]["login"])) echo $_SESSION["form"]["login"]; ?>"
-              required>
+              name="login" value="<?php if (isset($_SESSION["form"]["login"])) echo $_SESSION["form"]["login"]; ?>">
             <!-- Mensagem para Digitar uma Senha -->
             <div class="invalid-feedback">
               <?php echo $_SESSION["erroLogin"];
@@ -36,24 +35,25 @@ require_once 'header.php';
           <!-- Campo de Nome -->
           <div class="form-group">
             <label for="Nome Completo" class="col-form-label">Nome Completo</label>
-            <input type="text" class="form-control" name="nome" id="nome"
-              value="<?php if (isset($_SESSION["form"]["nome"])) echo $_SESSION["form"]["nome"]; ?>" required>
+            <input type="text" class="form-control <?php if (isset($_SESSION["erroNome"])) echo 'is-invalid'; ?>"
+              name="nome" id="nome"
+              value="<?php if (isset($_SESSION["form"]["nome"])) echo $_SESSION["form"]["nome"]; ?>">
             <!-- Mensagem para Digitar uma Senha -->
             <div class="invalid-feedback">
-              <?php echo $_SESSION["errosenha"];
-              unset($_SESSION["errosenha"]); ?>
+              <?php echo $_SESSION["erroNome"];
+              unset($_SESSION["erroNome"]); ?>
             </div>
           </div>
 
           <!-- Campo de Senha -->
           <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" class="form-control <?php if (isset($_SESSION["errosenha"])) echo 'is-invalid'; ?>"
+            <input type="password" class="form-control <?php if (isset($_SESSION["erroSenha"])) echo 'is-invalid'; ?>"
               name="senha" value="<?php if (isset($_SESSION["form"]["senha"])) echo $_SESSION["form"]["senha"]; ?>">
             <!-- Mensagem para Digitar uma Senha -->
             <div class="invalid-feedback">
-              <?php echo $_SESSION["errosenha"];
-              unset($_SESSION["errosenha"]); ?>
+              <?php echo $_SESSION["erroSenha"];
+              unset($_SESSION["erroSenha"]); ?>
             </div>
           </div>
 
