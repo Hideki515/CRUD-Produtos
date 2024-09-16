@@ -83,7 +83,7 @@ try {
 
   if ($stmt->rowCount() == 1) { // Inseriu com Sucesso
     $_SESSION['msg'] = '<div class="alert alert-success" role="alert">Novo Usuário Cadastrado com Sucesso.</div>';
-    header('Location:cadastrarUsuarios.php');
+    header('Location:listarUsuarios.php');
   } else {
     $_SESSION['msg'] = '<div class="alert alert-danger" role="alert">Erro ao Cadastrar novo Usuário.</div>';
     header('Location:cadastrarUsuarios.php');
