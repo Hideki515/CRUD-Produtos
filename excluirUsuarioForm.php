@@ -1,5 +1,7 @@
 <?php
+// Inicia a sessão
 session_start();
+// Inclui header.php no código
 require_once 'header.php';
 ?>
 
@@ -8,19 +10,29 @@ require_once 'header.php';
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6">
+        <!-- Titulo da página -->
         <h1 class="mt-2">Exclusão de Usuário</h1>
 
-        <form action="excluirUsuarioExclusao.php" method="post"
-          id="formExcluirUsuario">
-          <input type="hidden" name="login" value="<?php if (isset($_SESSION["form"]["id"])) echo $_SESSION["form"]["id"]; ?>">
+        <!-- Form de excluir usuário -->
+        <form action="excluirUsuarioExclusao.php" method="post" id="formExcluirUsuario">
+          <!-- Campo invísivel que tem o login -->
+          <input type="hidden" name="login"
+            value="<?php if (isset($_SESSION["form"]["id"])) echo $_SESSION["form"]["id"]; ?>">
+          <!-- Card de exluir usuario -->
           <div class="card text-white bg-secondary mb-3" style="max-width: 22 rem;">
+            <!-- Título do Card -->
             <div class="card-header">Confirmação da Exclusão do Usuario</div>
+            <!-- Corpo do Card -->
             <div class="card-body">
+              <!-- Sub titulo do corpo do Card -->
               <h5 class="card-title">Excluir?</h5>
+              <!-- Texto de confirmação de exclusão -->
               <p>Confirma exclusão do Login: <?php if (isset($_SESSION["form"]["id"])) echo $_SESSION["form"]["id"]; ?>
                 do Usuario: <?php if (isset($_SESSION["form"]["nome"])) echo $_SESSION["form"]["nome"]; ?> ?</p>
+              <!-- Botão de Confirmar Exclusão -->
               <button type="submit" class="btn	btn-danger	btn-sm	mt-2">Confirmar</button>
-              <a href="listarUsuarios.php" class="btn	btn-info	btn-sm	mt-2">Cancelar</a>
+              <!-- Botão de Cacelar Exclusão -->
+              <a href="listarUsuarios.php" class="btn	btn-warning	btn-sm	mt-2">Cancelar</a>
             </div>
           </div>
         </form>
@@ -30,11 +42,6 @@ require_once 'header.php';
   </div>
 </main>
 
-<script>
-  // Apenas se você precisar realmente fazer algo com a variável login no JavaScript
-  var login = "<?php echo isset($_SESSION["form"]["login"]) ? htmlspecialchars($_SESSION["form"]["login"], ENT_QUOTES, 'UTF-8') : ''; ?>";
-  console.log(login);
-</script>
-
 <?php
+// Inclui footer.php no código
 require_once 'footer.php';
