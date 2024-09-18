@@ -19,7 +19,7 @@ require_once 'header.php';
           <input type="hidden" name="login"
             value="<?php if (isset($_SESSION["form"]["id"])) echo $_SESSION["form"]["id"]; ?>">
           <!-- Card de exluir usuario -->
-          <div class="card text-white bg-secondary mb-3" style="max-width: 22 rem;">
+          <div class="card text-white bg-dark mb-3" style="max-width: 22 rem;">
             <!-- Título do Card -->
             <div class="card-header">Confirmação da Exclusão do Usuario</div>
             <!-- Corpo do Card -->
@@ -32,7 +32,7 @@ require_once 'header.php';
               <!-- Botão de Confirmar Exclusão -->
               <button type="submit" class="btn	btn-danger	btn-sm	mt-2">Confirmar</button>
               <!-- Botão de Cacelar Exclusão -->
-              <a href="listarUsuarios.php" class="btn	btn-warning	btn-sm	mt-2">Cancelar</a>
+              <a href="listarUsuarios.php" class="btn	btn-success	btn-sm	mt-2">Cancelar</a>
             </div>
           </div>
         </form>
