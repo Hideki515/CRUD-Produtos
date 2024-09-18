@@ -1,17 +1,13 @@
 <?php
+// Inicia a sessão
 session_start();
+// Inclui o código sanatizar.php
 include_once 'sanitizar.php';
 
 //Sanitização dos dados do Formulário
 $dadosform = sanitizar($_POST);
 $loginUsuario = $dadosform['login'];
 
-// echo "$loginUsuario";
-
-// if (!is_numeric($idproduto)) {  //Validação
-//   die("Id do produto não é numérico!");
-// }
-//Se passou pela validação sem erros, continua aqui 
 //Credenciais paraconexão com o Banco
 $dbhost = 'localhost:3306';
 $dbuser = 'root';
@@ -21,10 +17,12 @@ $dbname = 'crudproduto';
 //Abre conexão com o MySQL
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
+// Verifica se houve erro na conexão
 if ($conn->connect_error) {
-  die('Falha ao conectar com o MySQL: ' . $conn->connect_error);
+  die('Falha ao conectar com o MySQL: ' . $conn->connect_error); // Mensagem de erro ao conectar com o banco
 }
 
+// Realiza o delete no banco
 $sql = "DELETE FROM usuario WHERE login = '{$loginUsuario}'";
 
 $result = mysqli_query($conn, $sql); //A query seleciona as linhas da Tabela
