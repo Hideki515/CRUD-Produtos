@@ -39,12 +39,15 @@ require_once 'header.php';
           <div class="form-group">
             <label for="quantidade">Quantidade</label>
             <input type="number" class="form-control" name="quantidade" value="<?php if (isset($_SESSION["form"]["quantidade"])) echo $_SESSION["form"]["quantidade"];
-                                                                                      else echo '0'; ?>" required>
+                                                                                else echo '0'; ?>" required>
           </div>
           <!-- Quebra Pula uma linha -->
           <br>
           <!-- Botão para salvar o produto -->
-          <button type="submit" class="btn btn-success btn-sm">Salvar</button>
+          <button type="submit" class="btn btn-outline-success">Salvar</button>
+          <!-- Botão de Cancelar -->
+          <button type="reset" class="btn btn-outline-danger"
+            value="<?php unset($_SESSION['form']); ?>">Cancelar</button>
         </form>
         <?php unset($_SESSION['form']); ?>
       </div>
