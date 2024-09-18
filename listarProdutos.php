@@ -37,7 +37,7 @@ require_once 'header.php';
     //echo "<PRE>";
     if (mysqli_num_rows($result) > 0) {
       echo '<div class="table-responsive">';
-      echo '  <table class="table table-bordered table-hover table-sm">';
+      echo '  <table class="table table-hover table-sm">';
       echo '    <thead >';
       echo '      <tr class="table-info">';
       echo '        <th class="info">Id</th>';
@@ -58,8 +58,8 @@ require_once 'header.php';
         echo '  <td>' . $row['preco'] . '</td>';
         echo '  <td>' . $row['quantidade'] . '</td>';
         echo '  <td>' . $row['dataCadastro'] . '</td>';
-        echo ' <td> <a href="editarProduto.php?id=' . $row['id'] . '" class="btn btn-info btn-sm">Editar</a>
-           <a href="excluirProduto.php?id=' . $row['id'] . '&nome=' . $row['nome'] . '" class="btn btn-danger btn-sm mt-1">Excluir</a></td>';
+        echo ' <td> <a href="editarProduto.php?id=' . $row['id'] . '" class="btn btn-outline-secondary btn-sm">Editar</a>
+           <a href="excluirProduto.php?id=' . $row['id'] . '&nome=' . $row['nome'] . '" class="btn btn-outline-danger btn-sm">Excluir</a></td>';
 
         echo '</tr>';
       }
