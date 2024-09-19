@@ -13,15 +13,13 @@ require_once 'header.php';
         <form action="excluirProdutoExclusao.php" method="post"
           id="formExcluirProduto">
           <input type="hidden" name="id" value="<?php if (isset($_SESSION["form"]["id"])) echo $_SESSION["form"]["id"]; ?>">
-          <div class="card text-white bg-danger mb-3" style="max-width: 22 rem;">
+          <div class="card text-white bg-dark mb-3" style="max-width: 22 rem;">
             <div class="card-header">Confirmação da Exclusão do Produto</div>
             <div class="card-body">
               <h5 class="card-title">Excluir?</h5>
-              Confirma exclusão do produto: <?php if (isset($_SESSION["form"]["nome"])) echo $_SESSION["form"]["nome"]; ?> ?
-              <button type="submit" class="btn	btn-primary	btn-sm	mt-
-2">Confirmar</button>
-              <a href="listarProdutos.php" class="btn	btn-info	btn-sm	mt-
-2">Cancelar</a>
+              <p>Confirma exclusão do produto: <?php if (isset($_SESSION["form"]["nome"])) echo $_SESSION["form"]["nome"]; ?> ?</p>
+              <button type="submit" class="btn	btn-danger	btn-sm	mt-2">Confirmar</button>
+              <a href="listarProdutos.php" class="btn	btn-success	btn-sm	mt-2">Cancelar</a>
             </div>
           </div>
         </form>
